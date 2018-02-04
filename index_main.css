@@ -19,13 +19,13 @@ div {
   width: 100%;
 }
 .intro{
-  top: 0px;
   border: 2px solid black;
   border-radius: 12px;
-  padding: 25px;
-  margin: 25px;
+  padding:0;
+  margin:0;
   text-align: center;
-  width: 100%;
+  width: 99%;
+  object-fit: contain;
 }
 
 
@@ -82,7 +82,7 @@ h1 {
 
 
 .contactimages {
-  transform: scale(0.5, 0.5);
+  transform: scale(0.25, 0.25);
 }
 
 .nav h1 {
