@@ -73,8 +73,12 @@ h1 {
 
 .footer {
   color: black;
+  clear: both;
+  z-index: 10;
+  height: 3em;
+  margin-top: -3em;
   text-align: center;
-  position: fixed;
+  position: relative;
   left: 0;
   bottom: 0;
   width: 100%;
