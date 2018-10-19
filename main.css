@@ -121,7 +121,7 @@ video {
 .container {
     position: relative;
     display: none;
-    /* text-align: center; */
+    text-align: center;
 }
 
 /* Expanding image text */
