@@ -56,11 +56,11 @@ div {
 li a:hover {
   background-color: #111111;
 }
-.container {
+/* .container {
   display: flex;
   text-align: center;
 
-}
+} */
 
 .main {
   padding-left: 30px;
@@ -121,6 +121,7 @@ video {
 .container {
     position: relative;
     display: none;
+    text-align: center;
 }
 
 /* Expanding image text */
