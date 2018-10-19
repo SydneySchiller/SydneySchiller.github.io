@@ -131,6 +131,7 @@ h1 {
 
 .contactimages {
   transform: scale(0.25, 0.25);
+  padding: 16px;
 }
 
 .nav h1 {
