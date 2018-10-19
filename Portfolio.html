@@ -40,11 +40,7 @@
 	    clear: both;
 	}
 
-	/* The expanding image container */
-	.container {
-	    position: relative;
-	    display: none;
-	}
+
 
 	/* Expanding image text */
 	#imgtext {
@@ -64,7 +60,84 @@
 	    font-size: 35px;
 	    cursor: pointer;
 	}
-	</style>
+	/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+	opacity; 0.5;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: black;
+  margin: auto;
+  padding: 0;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mySlides {
+  display: none;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+img {
+  margin-bottom: -4px;
+}
+
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+</style>
 
 	<title> Sydney Schiller </title>
 	<meta charset="utf-8"/>
@@ -87,106 +160,178 @@
 				<h4 style="text-align:center">Click On Images to Expand</h1>
 
 				<h2 style="text-align:left;">Re:Search, A Campus Story</h2>
-				<p>
-					Re:Search is a game created for the UC Davis Biomedical Department, with the main goal of preparing university freshmen for undergraduate research. Through a series of chapters within the game, the player is introduced to historical research figures and common research methods and practices.
+				<p style="text-align:left">
+					Re:Search is a game created for the UC Davis Biomedical Department, with the main goal of preparing university freshmen for
+					 undergraduate research. Through a series of chapters within the game, the player is introduced to historical research figures
+					 and common research methods and practices.
 				</p>
-				<p>
-					My role in this project was to create the environment art for all 8 levels. This involved designing the layout of each level, creating all the assets within Aseprite, setting the colliders, and importing the maps into Unity.
+				<p style="text-align:left">
+					My role in this project was to create the environment art for all 8 levels. This involved designing the layout of each level,
+					creating all the assets within Aseprite, setting the colliders, and importing the maps into Unity.
 				</p>
-
 
 				<div class="row">
   				<div class="column">
-    				<img src="https://i.imgur.com/gAegsbH.png" alt="Level One: Campus" style="width:100%" onclick="myFunction(this);">
+    				<img src="https://i.imgur.com/gAegsbH.png" alt="Level One: Campus" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
   				</div>
   				<div class="column">
-    				<img src="https://i.imgur.com/wBIsylD.png" alt="Level One: Campus" style="width:100%" onclick="myFunction(this);">
+    				<img src="https://i.imgur.com/wBIsylD.png" alt="Level One: Campus" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
   				</div>
   				<div class="column">
-    				<img src="https://i.imgur.com/w51QY0W.png" alt="Level Two: Moscow" style="width:100%" onclick="myFunction(this);">
+    				<img src="https://i.imgur.com/w51QY0W.png" alt="Level Two: Moscow" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
   				</div>
   				<div class="column">
-    				<img src="https://i.imgur.com/REag76t.png" alt="Level Two: Moscow" style="width:100%" onclick="myFunction(this);">
+    				<img src="https://i.imgur.com/REag76t.png" alt="Level Two: Moscow" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
   				</div>
-				</div>
-
-				<div class="row">
-					<div class="column">
-						<img src="https://i.imgur.com/HYEyNHy.png" alt="Level Three: Michigan" style="width:100%" onclick="myFunction(this);">
-					</div>
-					<div class="column">
-						<img src="https://i.imgur.com/9hZfJpf.png" alt="Level Four: Baghdad" style="width:100%" onclick="myFunction(this);">
-					</div>
-					<div class="column">
-						<img src="https://i.imgur.com/aTWnb1T.png" alt="Level Four: Baghdad" style="width:100%" onclick="myFunction(this);">
-					</div>
-					<div class="column">
-						<img src="https://i.imgur.com/R8VomOH.png" alt="Level Five: Japan" style="width:100%" onclick="myFunction(this);">
-					</div>
 				</div>
 
 				<div class="row">
 					<div class="column">
-						<img src="https://i.imgur.com/P0lyllQ.png" alt="Level Five: Japan" style="width:100%" onclick="myFunction(this);">
+						<img src="https://i.imgur.com/HYEyNHy.png" alt="Level Three: Michigan" style="width:100%" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
 					</div>
 					<div class="column">
-						<img src="https://i.imgur.com/zQrbMfD.png" alt="Level Six: Germany" style="width:100%" onclick="myFunction(this);">
+						<img src="https://i.imgur.com/9hZfJpf.png" alt="Level Four: Baghdad" style="width:100%" onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
 					</div>
 					<div class="column">
-						<img src="https://i.imgur.com/LtlIXfX.png" alt="Level Seven: Egypt" style="width:100%" onclick="myFunction(this);">
+						<img src="https://i.imgur.com/aTWnb1T.png" alt="Level Four: Baghdad" style="width:100%" onclick="openModal();currentSlide(7)" class="hover-shadow cursor">
 					</div>
 					<div class="column">
-						<img src="https://i.imgur.com/pyyftnq.png" alt="Level Seven: Egypt" style="width:100%" onclick="myFunction(this);">
+						<img src="https://i.imgur.com/R8VomOH.png" alt="Level Five: Japan" style="width:100%" onclick="openModal();currentSlide(8)" class="hover-shadow cursor">
 					</div>
 				</div>
 
-				<div class="containerImage">
-			  	<span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-			  	<img id="expandedImg" style="width:75%">
-			  	<div id="imgtext"></div>
-				</div>
-
-				<h2 style="text-align:left;">Yum Yum Project</h2>
-				<p>
-				</p>
-
-				<div class="containerImage">
-			  	<span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-			  	<img id="expandedImg" style="width:75%">
-			  	<div id="imgtext"></div>
-				</div>
-
-				<h2 style="text-align:left;">C'est La Vie</h2>
-				<p>
-				</p>
-
-				<div class="containerImage">
-			  	<span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-			  	<img id="expandedImg" style="width:75%">
-			  	<div id="imgtext"></div>
-				</div>
-
-				<h2 style="text-align:left;">Blackwood</h2>
-				<p>
-				</p>
-
-				<div class="containerImage">
-					<span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-					<img id="expandedImg" style="width:75%">
-					<div id="imgtext"></div>
+				<div class="row">
+					<div class="column">
+						<img src="https://i.imgur.com/P0lyllQ.png" alt="Level Five: Japan" style="width:100%" onclick="openModal();currentSlide(9)" class="hover-shadow cursor">
+					</div>
+					<div class="column">
+						<img src="https://i.imgur.com/zQrbMfD.png" alt="Level Six: Germany" style="width:100%" onclick="openModal();currentSlide(10)" class="hover-shadow cursor">
+					</div>
+					<div class="column">
+						<img src="https://i.imgur.com/LtlIXfX.png" alt="Level Seven: Egypt" style="width:100%" onclick="openModal();currentSlide(11)" class="hover-shadow cursor">
+					</div>
+					<div class="column">
+						<img src="https://i.imgur.com/pyyftnq.png" alt="Level Seven: Egypt" style="width:100%" onclick="openModal();currentSlide(12)" class="hover-shadow cursor">
+					</div>
 				</div>
 
 
-			<script>
-			function myFunction(imgs) {
-			    var expandImg = document.getElementById("expandedImg");
-			    var imgText = document.getElementById("imgtext");
-			    expandImg.src = imgs.src;
-			    imgText.innerHTML = imgs.alt;
-			    expandImg.parentElement.style.display = "block";
-			}
-			</script>
+			<h2 style="text-align:left;">Yum Yum Project</h2>
+			<p style="text-align:left">
+			</p>
 
+
+			<h2 style="text-align:left;">C'est La Vie</h2>
+			<p style="text-align:left">
+			</p>
+
+
+
+			<h2 style="text-align:left;">Blackwood</h2>
+			<p style="text-align:left">
+			</p>
+
+
+
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <img src="https://i.imgur.com/gAegsbH.png" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <img src="https://i.imgur.com/wBIsylD.png" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <img src="https://i.imgur.com/w51QY0W.png" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <img src="https://i.imgur.com/REag76t.png" style="width:100%">
+    </div>
+
+
+		<div class="mySlides">
+			<img src="https://i.imgur.com/HYEyNHy.png" style="width:100%">
+		</div>
+
+		<div class="mySlides">
+			<img src="https://i.imgur.com/9hZfJpf.png" style="width:100%">
+		</div>
+
+		<div class="mySlides">
+			<img src="https://i.imgur.com/aTWnb1T.png" style="width:100%">
+		</div>
+
+		<div class="mySlides">
+			<img src="https://i.imgur.com/R8VomOH.png" style="width:100%">
+		</div>
+
+
+		<div class="mySlides">
+			<img src="https://i.imgur.com/P0lyllQ.png" style="width:100%">
+		</div>
+
+		<div class="mySlides">
+			<img src="https://i.imgur.com/zQrbMfD.png" style="width:100%">
+		</div>
+
+		<div class="mySlides">
+			<img src="https://i.imgur.com/LtlIXfX.png" style="width:100%">
+		</div>
+
+		<div class="mySlides">
+			<img src="https://i.imgur.com/pyyftnq.png" style="width:100%">
+		</div>
+
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+  </div>
+</div>
+
+
+					<script>
+					function openModal() {
+					  document.getElementById('myModal').style.display = "block";
+					}
+
+					function closeModal() {
+					  document.getElementById('myModal').style.display = "none";
+					}
+
+					var slideIndex = 1;
+					showSlides(slideIndex);
+
+					function plusSlides(n) {
+					  showSlides(slideIndex += n);
+					}
+
+					function currentSlide(n) {
+					  showSlides(slideIndex = n);
+					}
+
+					function showSlides(n) {
+					  var i;
+					  var slides = document.getElementsByClassName("mySlides");
+					  var dots = document.getElementsByClassName("demo");
+					  var captionText = document.getElementById("caption");
+					  if (n > slides.length) {slideIndex = 1}
+					  if (n < 1) {slideIndex = slides.length}
+					  for (i = 0; i < slides.length; i++) {
+					      slides[i].style.display = "none";
+					  }
+					  for (i = 0; i < dots.length; i++) {
+					      dots[i].className = dots[i].className.replace(" active", "");
+					  }
+					  slides[slideIndex-1].style.display = "block";
+					  dots[slideIndex-1].className += " active";
+					  captionText.innerHTML = dots[slideIndex-1].alt;
+					}
+					</script>
 
 				</div>
 			</body>

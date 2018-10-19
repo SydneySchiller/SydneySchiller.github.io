@@ -12,12 +12,12 @@ html, body {
   height: 100%;
   margin: 0;
   width: 100%;
-  padding:10px;
-  padding-bottom: 60px;
+  /* padding:10px;
+  padding-bottom: 60px; */
 }
 
 div {
-  padding-right: 30px;
+  padding-right: 35px;
   width: 100%;
 }
 .intro{
@@ -32,8 +32,9 @@ div {
 
 
 .wrapper {
-        text-align: center;
-    }
+ padding-right: 0px;
+  text-align: center;
+}
 
 .wrapper ul {
   list-style-type: none;
