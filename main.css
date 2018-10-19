@@ -120,8 +120,8 @@ video {
 /* The expanding image container (positioning is needed to position the close button and the text) */
 .container {
     position: relative;
-    display: flex;
-    text-align: center;
+    display: none;
+    /* text-align: center; */
 }
 
 /* Expanding image text */
