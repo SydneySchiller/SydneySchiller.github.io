@@ -333,6 +333,9 @@
 						// key blocker. prevent cursor keys from scrolling page while playing cart.
 
 						function onKeyDown_blocker(event) {
+							sound.pause();
+							sound.currentTime = 0;
+							
 							event = event || window.event;
 							var o = document.activeElement;
 							if (!o || o == document.body || o.tagName == "canvas")
