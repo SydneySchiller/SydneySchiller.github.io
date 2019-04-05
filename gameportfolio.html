@@ -1,0 +1,660 @@
+<!DOCTYPE HTML>
+
+
+
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>	
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="description" content="">
+	
+	<STYLE TYPE="text/css">
+		<!--
+		
+		canvas#canvas { width: 512px; height: 512px; }
+		
+		.pico8_el {
+		float:left;
+		width:92px;
+		display:inline-block;
+		margin: 1px;
+		padding: 4px;
+		text-align: center;
+		color:#fff;
+		background-color:#777;
+		font-family : verdana;
+		font-size: 9pt;
+		cursor: pointer;
+		cursor: hand;
+		}
+		.pico8_el a{
+		text-decoration: none;
+		color:#fff;
+		}
+		
+		.pico8_el:hover{
+		background-color:#aaa;
+		}
+		
+		.pico8_el:link{
+		background-color:#aaa;
+		}
+		
+		canvas{
+		image-rendering: optimizeSpeed;
+		image-rendering: -moz-crisp-edges;
+		image-rendering: -webkit-optimize-contrast;
+		image-rendering: optimize-contrast;
+		image-rendering: pixelated;
+		-ms-interpolation-mode: nearest-neighbor;
+		border: 0px
+		}
+		
+		-->
+		</STYLE>
+	<style>
+				/* Expanding image text */
+			#imgtext {
+				position: absolute;
+				bottom: 15px;
+				left: 15px;
+				color: white;
+				font-size: 20px;
+			}
+
+			/* Closable button inside the expanded image */
+			.closebtn {
+				position: absolute;
+				top: 10px;
+				right: 15px;
+				color: white;
+				font-size: 35px;
+				cursor: pointer;
+			}
+			/* The Modal (background) */
+		.modal {
+		display: none;
+		position: fixed;
+		z-index: 1;
+		padding-top: 100px;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		overflow: auto;
+		background-color: black;
+			
+		}
+
+		/* Modal Content */
+		.modal-content {
+		position: relative;
+		background-color: black;
+		margin: auto;
+		padding: 0;
+		width: 100%;
+		max-width: 1200px;
+		}
+
+		/* The Close Button */
+		.close {
+		color: white;
+		position: absolute;
+		top: 10px;
+		right: 25px;
+		font-size: 35px;
+		font-weight: bold;
+		}
+
+		.close:hover,
+		.close:focus {
+		color: #999;
+		text-decoration: none;
+		cursor: pointer;
+		}
+
+		.mySlides {
+		display: none;
+		}
+
+		.cursor {
+		cursor: pointer;
+		}
+
+		img {
+		margin-bottom: -4px;
+		}
+
+		.caption-container {
+		text-align: center;
+		background-color: black;
+		padding: 2px 16px;
+		color: white;
+		}
+
+		.demo {
+		opacity: 0.6;
+		}
+
+		.active,
+		.demo:hover {
+		opacity: 1;
+		}
+
+		img.hover-shadow {
+		transition: 0.3s;
+		}
+
+		.hover-shadow:hover {
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		}
+
+		/* The grid: Four equal columns that floats next to each other */
+		.column {
+			float: left;
+			width: 25%;
+			padding: 10px;
+		}
+	
+		/* Style the images inside the grid */
+		.column img {
+			opacity: 0.8;
+			cursor: pointer;
+		}
+	
+		.column img:hover {
+			opacity: 1;
+		}
+	
+		/* Clear floats after the columns */
+		.row:after {
+			content: "";
+			display: table;
+			clear: both;
+		}
+	</style>
+
+	
+		<title>Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Sydney Schiller</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">About Me</a></li>
+							<li class="active"><a href="generic.html">Game & Design Portfolio</a></li>
+							<li><a href="programmingportfolio.html">Programming Portfolio</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="https://www.instagram.com/babysnalgli/?hl=en" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="https://github.com/SydneySchiller" class="icon fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+					<h1 style="text-align:center">Game & Design Portfolio</h1>
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<h2>Re:Search</br>
+										A Campus Story</h2>
+										<p>Responsibilities: Level Designer, Game Designer, 2D Artist</p>
+								</header>
+
+						<div class="row">
+							<div class="column">
+								<img src="https://i.imgur.com/gAegsbH.png" alt="Level One: Campus" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+							</div>
+							<div class="column">
+								<img src="https://i.imgur.com/wBIsylD.png" alt="Level One: Campus" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+							</div>
+							<div class="column">
+								<img src="https://i.imgur.com/w51QY0W.png" alt="Level Two: Moscow" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+							</div>
+							<div class="column">
+								<img src="https://i.imgur.com/REag76t.png" alt="Level Two: Moscow" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+							</div>
+							</div>
+
+						<div class="row">
+							<div class="column">
+								<img src="https://i.imgur.com/HYEyNHy.png" alt="Level Three: Michigan" style="width:100%" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
+							</div>
+							<div class="column">
+								<img src="https://i.imgur.com/9hZfJpf.png" alt="Level Four: Baghdad" style="width:100%" onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
+							</div>
+							<div class="column">
+								<img src="https://i.imgur.com/aTWnb1T.png" alt="Level Four: Baghdad" style="width:100%" onclick="openModal();currentSlide(7)" class="hover-shadow cursor">
+							</div>
+							<div class="column">
+								<img src="https://i.imgur.com/R8VomOH.png" alt="Level Five: Japan" style="width:100%" onclick="openModal();currentSlide(8)" class="hover-shadow cursor">
+							</div>
+						</div>
+		
+						<div class="row">
+							<div class="column">
+								<img src="https://i.imgur.com/P0lyllQ.png" alt="Level Five: Japan" style="width:100%" onclick="openModal();currentSlide(9)" class="hover-shadow cursor">
+							</div>
+							<div class="column">
+								<img src="https://i.imgur.com/zQrbMfD.png" alt="Level Six: Germany" style="width:100%" onclick="openModal();currentSlide(10)" class="hover-shadow cursor">
+							</div>
+							<div class="column">
+								<img src="https://i.imgur.com/LtlIXfX.png" alt="Level Seven: Egypt" style="width:100%" onclick="openModal();currentSlide(11)" class="hover-shadow cursor">
+							</div>
+							<div class="column">
+								<img src="https://i.imgur.com/pyyftnq.png" alt="Level Seven: Egypt" style="width:100%" onclick="openModal();currentSlide(12)" class="hover-shadow cursor">
+							</div>
+						</div>
+						<br><br>
+
+						<p style="text-align:left">
+							Re:Search, A Campus Story is a 2D top-down role playing game developed for the Biomedical Department
+							at University of California, Davis. This game was developed to replace traditional homework, in an
+							effort to promote engagement with the course material while also maintaining the goal of teaching
+							freshmen college students about undergraduate research. This game is currently deployed across all UC
+							campuses as online class teaching undergraduate research basics.
+						</p>
+						<p style="text-align:left">
+							The plot of the game follows a student in a research studies class who must complete an essay on famous
+							researchers. To get first-person sources, the student travels through time and meets famous researches
+								across a variety of fields and completes quests to help the researchers with their field of study.
+						</p>
+						<p style="text-align:left">
+							My responsibilities in our small team include game design, level design, and 2D environment art.I created
+							7 unique maps composed of at least 100 assets per map using Aseprite and Tiled. I then exported these
+							maps to Unity and insured their functionality through exhaustive collision testing. To allow future team
+							members to take over my role, as I am soon graduating, I maintained detailed documentation on 2D art
+							assets for further future implementations. After the game was deployed, I stayed on the team to
+							continue to balance the set collisions and alter levels as necessary.
+						</p>
+
+					</section>
+
+
+					<section class="post">
+							<header class="major">
+								<h2>C'est La Vie</h2>
+									<p>Responsibilities: Game Artist and Programmer</p>
+							</header>
+					
+								<center><div style="width:512px;">
+
+								<canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()"></canvas>
+
+								<script type="text/javascript">
+									var canvas = document.getElementById("canvas");
+									canvas.width = window.innerWidth;
+									canvas.height = window.innerHeight;
+
+									var Module = {};
+									Module.canvas = canvas;
+
+						/*
+							// When pico8_buttons is defined, PICO-8 takes each int to be a live bitfield
+							// representing the state of each player's buttons
+
+							var pico8_buttons = [0, 0, 0, 0, 0, 0, 0, 0]; // max 8 players
+							pico8_buttons[0] = 2 | 16; // example: player 0, RIGHT and Z held down
+
+							// when pico8_gpio is defined, reading and writing to gpio pins will
+							// read and write to these values
+							var pico8_gpio = new Array(128);
+						*/
+					</script>
+
+					<script async type="text/javascript" src="sailorv.js"></script>
+
+					<script>
+						// key blocker. prevent cursor keys from scrolling page while playing cart.
+
+						function onKeyDown_blocker(event) {
+							event = event || window.event;
+							var o = document.activeElement;
+							if (!o || o == document.body || o.tagName == "canvas")
+							{
+								if ([32, 37, 38, 39, 40].indexOf(event.keyCode) > -1)
+								{
+									if (event.preventDefault) event.preventDefault();
+								}
+							}
+						}
+
+						document.addEventListener('keydown', onKeyDown_blocker, false);
+
+					</script>
+
+					<br>
+
+					<div class=pico8_el onclick="Module.pico8Reset();">
+
+					<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAaklEQVR4Ae2dOwoAMQhE15A+rfc/3bZ7AlMnQfywCkKsfcgMM9ZP+QHtIn0vLeBAFduiFdQ/0DmvtR5LXJ6CPSXe2ZXcFNlTxFbemKrbZPs35XogeS9xeQr+anT6LzoOwEDwZJ7jwhXUnwkTTiDQ2Ja34AAAABB0RVh0TG9kZVBORwAyMDExMDIyMeNZtsEAAAAASUVORK5CYII=" alt="Reset" width=12 height=	12/>
+
+					Reset</div>
+
+					<div class=pico8_el onclick="Module.pico8TogglePaused();">
+
+					<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAPUlEQVR4Ae3doQ0AIAxEUWABLPtPh2WCq26DwFSU/JPNT166QSu/Hg86W9dwLte+diP7AwAAAAAAgD+A+jM2ZAgo84I0PgAAABB0RVh0TG9kZVBORwAyMDExMDIyMeNZtsEAAAAASUVORK5CYII=" alt="Pause" width=12 height=12/>
+
+					Pause</div>
+					<div class=pico8_el onclick="Module.requestFullScreen(true, false);">
+					<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAaklEQVR4Ae2dsQ1AIQhExfze1v2ns3UCrfgFhmgUUAoGgHscp21wX9BqaZoDojbB96OkDJKNcTN2BHTyYNYmoT2BlPL7BKgcPfHjAVXKKadkHOn9K1r16N0czN6a95N8mnA7Aq2fTZ3Af3UKmCSMazL8HwAAABB0RVh0TG9kZVBORwAyMDExMDIyMeNZtsEAAAAASUVORK5CYII=" alt="Fullscreen" width=12 height=12/>
+
+					Fullscreen</div>
+					<div class=pico8_el onclick="Module.pico8ToggleSound();">
+					<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAXklEQVR4Ae2doQ4AIQxD4YLH8v9fh+ULhjpxxSwLg2uyapr1JRu1iV5Z+1BGl4+xNpX38SYo2uRvYiT5LwEmt+ocgXVLrhPEgBiw8Q5w7/kueSkK+D2tJO4E/I3GrwkqQCBabEj/4QAAABB0RVh0TG9kZVBORwAyMDExMDIyMeNZtsEAAAAASUVORK5CYII=" alt="Toggle Sound" width=12 height=12/>
+
+					Sound</div>
+					<div class=pico8_el ><a target="_new" href="http://www.lexaloffle.com/bbs/?cat=7&sub=2">
+					<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAlElEQVR4Ae2dMQ5FQBCGh6jcwAkkateg3DiAa+iQUGqVKi95FQfAJRQOoHeBUf8JyQqKjZ1uMzuz2e/LTE3KhyF7kSlgLOykas23f6D+A9Yp84aAOYU15pcJnfji0Il2ID8HzC4y38ZrnfIBGxeRoR3c3EWrACdsV5BOsx7OSRnrOXh4F5HzA6bevwUn8wlz7eCDsQM99B3ks0s/4QAAABB0RVh0TG9kZVBORwAyMDExMDIyMeNZtsEAAAAASUVORK5CYII=" alt="More Carts" width=12 height=12/>
+
+					Carts</a></div>
+
+					<br>
+
+					</div></center>
+					<br><br>
+		
+						<p style="text-align:left">
+							C'est La Vie is a game inspired by a game played by the sailor scouts in the television show, Sailor Moon. This game is a brawling style game, where you
+							play as Sailor V, and fight your way through Tokyo to save the city. In several spots throughout the two levels, the screen will lock, forcing you to kill
+							all enemies before you can progress. To do this tactfully, there is a combo system within the game which allows you to rank up more damage points.
+						</p>
+						<p style="text-align:left">
+							I worked within a team of 6 (including myself) to create this game within the virtual console, Pico-8. My responsibilites for this game was programming the background
+							parallaxing animation controller for the player sprite, which carried over to the enemy sprites as well. I also created the Sailor V character sprites and all of the
+							environment art as well.
+						</p>
+								
+				</section>
+
+				<!-- Elastic App -->
+				<section class="post">
+					<header class="major">
+						<h2>Elastic</h2>
+							<p>Responsibilities: 2D Art, User Research, Design</p>
+					</header>
+
+						<div class="row">
+								<div class="column">
+									<img src="https://i.imgur.com/fWgyFqc.png" alt="Home Screen" style="width:100%" class="hover-shadow cursor">
+								</div>
+								<div class="column">
+									<img src="https://i.imgur.com/PspV5Sh.png" alt="Side Menu" style="width:100%"  class="hover-shadow cursor">
+								</div>
+								<div class="column">
+									<img src="https://i.imgur.com/jFYxxQK.png" alt="List of Stretches" style="width:100%"  class="hover-shadow cursor">
+								</div>
+								<div class="column">
+									<img src="https://i.imgur.com/4eObKCz.png" alt="In Depth Stretch View" style="width:100%"  class="hover-shadow cursor">
+								</div>
+							</div>
+						</br></br>
+
+						<p style="text-align:left">
+								<i>Elastic</i>, is a mobile application with an interactive human model to assist users in identifying precise locations of pain. When 
+								interacting with this human model, users will be able to select progressively more specific muscle groups. Once the area of pain 
+								is identified and clicked, the application will provide feedback to the user by displaying a list of stretches and a list of common 
+								causes of pain for this muscle. The user will be able to select a stretch and will be displayed diagrams or gifs of people performing 
+								this stretch. At any given moment when interacting with the human model, the user will be able to either select progressively more 
+								precise muscles, or be able to “zoom out” for more generalized areas of pain. 	
+						</p>
+					</section>
+
+					<section class="post">
+							<header class="major">
+								<h2>Yum Yum Project</h2>
+									<p>Responsibilities: Level Designer, Game Designer, 2D Artist</p>
+							</header>
+									<div class="box alt">
+										<div class="row gtr-50 gtr-uniform">
+											<div class="col-4"><span class="image fit"><img src="https://i.imgur.com/o8nwyBy.png" alt="Find the Veggies" onclick="openModal();currentSlide(13)" class="hover-shadow cursor"/></span></div>
+											<div class="col-4"><span class="image fit"><img src="https://i.imgur.com/UU8iixz.png" alt="Veggie Racing" onclick="openModal();currentSlide(14)" class="hover-shadow cursor"/></span></div>
+											<div class="col-4"><span class="image fit"><img src="https://i.imgur.com/LYaRQeH.png" alt="Veggie Crush" onclick="openModal();currentSlide(15)" class="hover-shadow cursor"/></span></div>
+											
+										</div>
+									</div>
+									<br><br>
+
+									<p style="text-align:left">
+										The Yum Yum Project is a game comprised of 14 mini-games, whose main goal is to encourage children around the age of seven to desire vegetables and promote
+										a healthier diet. This game is to be used in a research study put on by the Department of Food Science and Department of Communications at UC Davis. My work
+										on this project includes maintaining documentation on the game specification and design so that all programmers were kept up to date, assisted in the design
+										of all 14 mini-games and prototyped four of those games within Unity. For these games, I worked on player movement,
+										I created the acceleration system for vehicles, and implemented an accessible mouse-based control interface. I also designed nine different race track levels
+										which were based on an easy/medium/hard difficulty level.
+									</p>
+
+						</section>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<section>
+							<form method="POST" action="https://formspree.io/sydneyschiller@gmail.com">
+								<div class="fields">
+									<div class="field">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" />
+									</div>
+									<div class="field">
+										<label for="email">Email</label>
+										<input type="text" name="email" id="email" />
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="3"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" /></li>
+
+								</ul>
+							</form>
+						</section>
+						<section class="split contact">
+							<section class="alt">
+								<h3>Location</h3>
+								<p>Davis, CA</p>
+							</section>
+							
+							<section>
+								<h3>Email</h3>
+								<p>contact@sydneyschiller.com</p>
+							</section>
+
+							<section>
+								<h3>Resume</h3>
+								<p><a href="#">Download</a></p>
+							</section>
+							<section>
+								<h3>Social</h3>
+								<ul class="icons alt">
+									<li><a href="https://www.instagram.com/babysnalgli/?hl=en" class="icon alt fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="https://github.com/SydneySchiller" class="icon alt fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</section>
+						</section>
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+		<!-- Photo Expansion Code -->
+		<div id="myModal" class="modal">
+			<span class="close cursor" onclick="closeModal()">&times;</span>
+			<div class="modal-content">
+			
+				<!-- Re:Search -->
+				<div class="mySlides">
+				<img src="https://i.imgur.com/gAegsbH.png" style="width:100%">
+				</div>
+			
+				<div class="mySlides">
+				<img src="https://i.imgur.com/wBIsylD.png" style="width:100%">
+				</div>
+			
+				<div class="mySlides">
+				<img src="https://i.imgur.com/w51QY0W.png" style="width:100%">
+				</div>
+			
+				<div class="mySlides">
+				<img src="https://i.imgur.com/REag76t.png" style="width:100%">
+				</div>
+			
+			
+				<div class="mySlides">
+				<img src="https://i.imgur.com/HYEyNHy.png" style="width:100%">
+				</div>
+		
+				<div class="mySlides">
+				<img src="https://i.imgur.com/9hZfJpf.png" style="width:100%">
+				</div>
+		
+				<div class="mySlides">
+				<img src="https://i.imgur.com/aTWnb1T.png" style="width:100%">
+				</div>
+		
+				<div class="mySlides">
+				<img src="https://i.imgur.com/R8VomOH.png" style="width:100%">
+				</div>
+		
+		
+				<div class="mySlides">
+				<img src="https://i.imgur.com/P0lyllQ.png" style="width:100%">
+				</div>
+		
+				<div class="mySlides">
+				<img src="https://i.imgur.com/zQrbMfD.png" style="width:100%">
+				</div>
+		
+				<div class="mySlides">
+				<img src="https://i.imgur.com/LtlIXfX.png" style="width:100%">
+				</div>
+		
+				<div class="mySlides">
+				<img src="https://i.imgur.com/pyyftnq.png" style="width:100%">
+				</div>
+
+				<!-- Yum Yum Project -->
+				<div class="mySlides">
+				<img src="https://i.imgur.com/o8nwyBy.png" style="width:100%">
+				</div>
+		
+				<div class="mySlides">
+				<img src="https://i.imgur.com/UU8iixz.png" style="width:100%">
+				</div>
+		
+				<div class="mySlides">
+				<img src="https://i.imgur.com/LYaRQeH.png" style="width:100%">
+				</div>
+		
+				<div class="caption-container">
+				<p id="caption"></p>
+				</div>
+			</div>
+		</div>
+				
+				
+		<script>
+		function openModal() {
+		document.getElementById('myModal').style.display = "block";
+		}
+
+		function closeModal() {
+		document.getElementById('myModal').style.display = "none";
+		}
+
+		var slideIndex = 1;
+		showSlides(slideIndex);
+
+		function plusSlides(n) {
+		showSlides(slideIndex += n);
+		}
+
+		function currentSlide(n) {
+		showSlides(slideIndex = n);
+		}
+
+		function showSlides(n) {
+		var i;
+		var slides = document.getElementsByClassName("mySlides");
+		var dots = document.getElementsByClassName("demo");
+		var captionText = document.getElementById("caption");
+		if (n > slides.length) {slideIndex = 1}
+		if (n < 1) {slideIndex = slides.length}
+		for (i = 0; i < slides.length; i++) {
+			slides[i].style.display = "none";
+		}
+		for (i = 0; i < dots.length; i++) {
+			dots[i].className = dots[i].className.replace(" active", "");
+		}
+		slides[slideIndex-1].style.display = "block";
+		dots[slideIndex-1].className += " active";
+		captionText.innerHTML = dots[slideIndex-1].alt;
+		}
+		</script>
+	</body>
+</html>
+
+
+<!-- <section class="post">
+		<header class="major">
+			<h2>Yum Yum Project</h2>
+				<p>Responsibilities: Level Designer, Game Designer, 2D Artist</p>
+		</header>
+
+		<div class="row">
+				<div class="column">
+				  <img src="https://i.imgur.com/gAegsbH.png" alt="Level One: Campus" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+				</div>
+				<div class="column">
+				  <img src="https://i.imgur.com/wBIsylD.png" alt="Level One: Campus" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+				</div>
+				<div class="column">
+				  <img src="https://i.imgur.com/w51QY0W.png" alt="Level Two: Moscow" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+				</div>
+				<div class="column">
+				  <img src="https://i.imgur.com/REag76t.png" alt="Level Two: Moscow" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+				</div>
+			  </div>
+
+
+			  <p style="text-align:left">
+					
+				</p>
+
+	</section> -->
